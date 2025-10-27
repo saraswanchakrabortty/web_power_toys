@@ -1,61 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="./output.css" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
   <title>Web Power Toys</title>
 </head>
 
-<body class="min-w-[200px] bg-neutral-300 font-mono">
-  <h1 class="text-center font-semibold">Web Power Toys 🔨</h1>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 class="title">Web Power Toys 🔨</h1>
+    </header>
 
+    <div class="button-grid">
+      <button id="captureBtn" class="primary-button">
+        <span class="button-text">Snap Webview</span>
+      </button>
 
-  <div class="grid gap-2 m-2 p-2 grid-cols-1">
+      <button id="savePdfBtn" class="primary-button">
+        <span class="button-text">Get PDF (URL & Timestamp)</span>
+      </button>
 
-    <button id="captureBtn"
-      class="child col-span-1 rounded relative h-[50px] w-45 overflow-hidden border border-blue-900 bg-white text-blue-900 shadow-2xl transition-all before:absolute before:left-0 before:right-0 before:top-0 before:h-0 before:w-full before:bg-blue-900 before:duration-500 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0 after:w-full after:bg-blue-900 after:duration-500 hover:text-white hover:shadow-blue-900 hover:before:h-2/4 hover:after:h-2/4"><span
-        class="relative z-10">
-        Snap Webview
-      </span>
-    </button>
+      <div class="dropdown-section">
+        <button class="dropdown-toggle">
+          <span class="dropdown-text">Experimental Features</span>
+          <span class="dropdown-arrow">⌄</span>
+        </button>
+        <div class="dropdown-content">
+          <button class="dropdown-button">
+            <span class="button-text">Record Webflow</span>
+          </button>
+          <button class="dropdown-button">
+            <span class="button-text">Edit & Share Webview</span>
+          </button>
+        </div>
+      </div>
+    </div>
 
-    <button id=""
-      class="col-span-1 rounded relative h-[50px] w-45 overflow-hidden border border-blue-900 bg-white text-blue-900 shadow-2xl transition-all before:absolute before:left-0 before:right-0 before:top-0 before:h-0 before:w-full before:bg-blue-900 before:duration-500 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0 after:w-full after:bg-blue-900 after:duration-500 hover:text-white hover:shadow-blue-900 hover:before:h-2/4 hover:after:h-2/4"><span
-        class="relative z-10">
-        Save as PDF with URL (Experimental)
-      </span>
-    </button>
-
-    <button id=""
-      class="col-span-1 rounded relative h-[50px] w-45 overflow-hidden border border-blue-900 bg-white text-blue-900 shadow-2xl transition-all before:absolute before:left-0 before:right-0 before:top-0 before:h-0 before:w-full before:bg-blue-900 before:duration-500 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0 after:w-full after:bg-blue-900 after:duration-500 hover:text-white hover:shadow-blue-900 hover:before:h-2/4 hover:after:h-2/4"><span
-        class="relative z-10">
-        Record Webflow (Experimental)
-      </span>
-    </button>
-
-    <button id=""
-      class="col-span-1 rounded relative h-[50px] w-45 overflow-hidden border border-blue-900 bg-white text-blue-900 shadow-2xl transition-all before:absolute before:left-0 before:right-0 before:top-0 before:h-0 before:w-full before:bg-blue-900 before:duration-500 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0 after:w-full after:bg-blue-900 after:duration-500 hover:text-white hover:shadow-blue-900 hover:before:h-2/4 hover:after:h-2/4"><span
-        class="relative z-10">
-        Edit&Share Webview (Experimental)
-      </span>
-    </button>
-
-    
+    <footer class="footer">
+      <div class="version">(Alpha Release) v - 0.2</div>
+    </footer>
   </div>
 
-
-  <div class="mt-[30px] text-center">
-    <h1>(Alpha Release) v - 0.0.1</h1>
-  </div>
-
-
-  </div>
-
-
-
+  <script src="./popup.js"></script>
 </body>
-<script src="./popup.js"></script>
-
 </html>

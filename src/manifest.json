@@ -1,16 +1,45 @@
 {
   "manifest_version": 3,
-  "name": "Web Power Toys",
+  "name": "Web Power Toys – Screenshot & PDF Capture Tools",
+  "short_name": "Web Power Toys",
+  "description": "Quickly capture webpage screenshots or save timestamped PDFs in one click.",
+  "version": "0.2",
   "author": "Saraswan Chakrabortty",
-  "description": "Facilitating easy access to essential utilities within the web view for an enhanced user experience",
-  "version": "0.0.1",
+
   "icons": {
-    "16": "icons/icon.png",  
-    "48": "icons/icon.png",   
-    "128": "icons/icon.png"  
+    "16": "icons/icon.png",
+    "48": "icons/icon.png",
+    "128": "icons/icon.png"
   },
-  "permissions": ["activeTab"],
+
   "action": {
-    "default_popup": "popup.html"
-  }
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon.png",
+      "48": "icons/icon.png",
+      "128": "icons/icon.png"
+    }
+  },
+
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "scripting"
+  ],
+
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "web_accessible_resources": [
+    {
+      "resources": ["icons/icon.png"],
+      "matches": ["<all_urls>"]
+    }
+  ]
 }

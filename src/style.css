@@ -1,0 +1,292 @@
+:root {
+  /* Colors */
+  --primary: #8ab4f8;
+  --primary-container: #1e3a5f;
+  --on-primary: #0c0e14;
+  --surface: #1c1c1e;
+  --surface-container: #2d2d30;
+  --surface-container-high: #3c3c3f;
+  --on-surface: #e3e3e3;
+  --on-surface-variant: #c8c6ca;
+  --outline: #5c5d60;
+  --outline-variant: #444746;
+  
+  /* Effects */
+  --shadow-1: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-2: 0 3px 6px rgba(0, 0, 0, 0.3);
+  --shadow-3: 0 8px 16px rgba(0, 0, 0, 0.4);
+  
+  /* Animation */
+  --ease-emphasized: cubic-bezier(0.2, 0.0, 0.0, 1.0);
+  --ease-standard: cubic-bezier(0.2, 0.0, 0, 1.0);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Google Sans', 'Roboto', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+  background: var(--surface);
+  color: var(--on-surface);
+  min-width: 280px;
+  line-height: 1.5;
+  letter-spacing: 0.25px;
+}
+
+.container {
+  padding: 20px 16px;
+  width: 100%;
+  border-radius: 24px;
+  background: var(--surface);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--on-surface);
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0.15px;
+}
+
+/* Button Grid */
+.button-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+/* Primary Button */
+.primary-button {
+  background: var(--primary-container);
+  border: none;
+  border-radius: 20px;
+  color: var(--primary);
+  padding: 16px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s var(--ease-emphasized);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  width: 100%;
+  box-shadow: var(--shadow-1);
+  position: relative;
+  overflow: hidden;
+}
+
+.primary-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--primary);
+  opacity: 0;
+  transition: opacity 0.2s var(--ease-emphasized);
+  border-radius: 20px;
+}
+
+.primary-button:hover::before {
+  opacity: 0.08;
+}
+
+.primary-button:active::before {
+  opacity: 0.12;
+}
+
+.primary-button:hover {
+  box-shadow: var(--shadow-2);
+  transform: translateY(-1px);
+}
+
+.primary-button:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-1);
+}
+
+/* Dropdown Section */
+.dropdown-section {
+  border-radius: 20px;
+  background: var(--surface-container);
+  overflow: hidden;
+  box-shadow: var(--shadow-1);
+  transition: all 0.3s var(--ease-emphasized);
+}
+
+.dropdown-section:hover {
+  box-shadow: var(--shadow-2);
+}
+
+.dropdown-toggle {
+  background: transparent;
+  border: none;
+  border-radius: 20px;
+  color: var(--on-surface-variant);
+  padding: 16px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s var(--ease-emphasized);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.dropdown-toggle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--on-surface);
+  opacity: 0;
+  transition: opacity 0.2s var(--ease-emphasized);
+  border-radius: 20px;
+}
+
+.dropdown-toggle:hover::before {
+  opacity: 0.08;
+}
+
+.dropdown-toggle:active::before {
+  opacity: 0.12;
+}
+
+.dropdown-arrow {
+  font-size: 18px;
+  transition: transform 0.3s var(--ease-emphasized);
+  color: var(--on-surface-variant);
+}
+
+.dropdown-section.active .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+/* Dropdown Content */
+.dropdown-content {
+  display: none;
+  padding: 0 12px 12px 12px;
+  gap: 8px;
+  flex-direction: column;
+}
+
+.dropdown-section.active .dropdown-content {
+  display: flex;
+  animation: slideDown 0.3s var(--ease-emphasized);
+}
+
+.dropdown-button {
+  background: var(--surface-container-high);
+  border: none;
+  border-radius: 16px;
+  color: var(--on-surface-variant);
+  padding: 14px 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s var(--ease-emphasized);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 400;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.dropdown-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--on-surface);
+  opacity: 0;
+  transition: opacity 0.2s var(--ease-emphasized);
+  border-radius: 16px;
+}
+
+.dropdown-button:hover::before {
+  opacity: 0.08;
+}
+
+.dropdown-button:active::before {
+  opacity: 0.12;
+}
+
+.dropdown-button:hover {
+  color: var(--on-surface);
+}
+
+/* Footer */
+.footer {
+  margin-top: 20px;
+  text-align: center;
+  padding-top: 16px;
+  border-top: 1px solid var(--outline-variant);
+}
+
+.version {
+  font-size: 11px;
+  color: var(--on-surface-variant);
+  font-weight: 400;
+  opacity: 0.7;
+  letter-spacing: 0.4px;
+}
+
+/* Animations */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Enhanced focus indicators */
+.primary-button:focus-visible,
+.dropdown-toggle:focus-visible,
+.dropdown-button:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Smooth appearance for the popup */
+body {
+  animation: popupAppear 0.3s var(--ease-emphasized);
+}
+
+@keyframes popupAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
