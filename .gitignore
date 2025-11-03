@@ -1,0 +1,199 @@
+# ===========================================
+# OS-SPECIFIC FILES
+# ===========================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+*/.Spotlight-V100
+*/.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+Desktop.ini
+Thumbs.db
+ehthumbs.db
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+.nfs*
+
+# ===========================================
+# NODE / JAVASCRIPT PROJECTS
+# ===========================================
+
+# Dependencies
+/node_modules/
+/jspm_packages/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directories
+coverage
+*.lcov
+
+# Build output
+/dist/
+/build/
+/out/
+/tmp/
+/cache/
+/.next/
+/.nuxt/
+/.astro/
+
+# Compiled source
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# ===========================================
+# ENVIRONMENT FILES
+# ===========================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ===========================================
+# EDITOR / IDE FILES
+# ===========================================
+
+# VS Code
+.vscode/
+.history/
+*.code-workspace
+
+# JetBrains (WebStorm, IntelliJ, PhpStorm)
+.idea/
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# Others
+*.swp
+*.swo
+*.bak
+*.tmp
+*.temp
+
+# ===========================================
+# TESTING / REPORTS
+# ===========================================
+/coverage/
+/reports/
+/cypress/screenshots/
+/cypress/videos/
+
+# ===========================================
+# PACKAGE MANAGERS
+# ===========================================
+# Yarn
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+
+# npm
+.npm
+
+# pnpm
+.pnpm-debug.log*
+node_modules/
+
+# ===========================================
+# MISCELLANEOUS
+# ===========================================
+
+# TypeScript
+*.tsbuildinfo
+
+# Sass cache
+.sass-cache/
+
+# Optional npm cache directory
+.npm/
+
+# Optional eslint cache
+.eslintcache
+
+# Stylelint cache
+.stylelintcache
+
+# Parcel cache
+.cache
+.parcel-cache
+
+# Vite cache
+.vite
+
+# Next.js build output
+.next/
+out/
+
+# Nuxt build
+.nuxt/
+
+# Gatsby files
+.cache/
+public/
+
+# Vue files
+node_modules/
+dist/
+
+# React Native
+.expo/
+web-build/
+android/
+ios/
+
+# ===========================================
+# CHROME EXTENSION SPECIFIC
+# ===========================================
+# Build artifacts and packed extensions
+*.crx
+*.pem
+*.zip
+
+# ===========================================
+# CUSTOM (USER-DEFINED)
+# ===========================================
+
+# Local testing or output directories
+/test-output/
+/screenshots/
+/downloads/
+/notes/
+/drafts/
+
+# Ignore all system-generated junk
+*.orig
+*.rej
